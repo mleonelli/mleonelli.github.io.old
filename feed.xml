@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mauro Leonelli</title>
+    <description>Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.
+</description>
+    <link>http://mauroleonelli.com/</link>
+    <atom:link href="http://mauroleonelli.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 27 May 2015 14:18:35 +0200</pubDate>
+    <lastBuildDate>Wed, 27 May 2015 14:18:35 +0200</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Run Jekyll on Windows</title>
+        <description>&lt;p&gt;My blog didn’t get updated that often recently, huh?&lt;/p&gt;
+
+&lt;p&gt;Well, in addition to a big project I have been managing recently, I have less and less time to work on my Mac where all the development and publish to GitHub was set up. Thus, never got the chance to upload the couple of pages and changes I had on my Windows machine, ready to be Jekyll-built and pushed to GitHub.&lt;/p&gt;
+
+&lt;p&gt;That had to come to an end…&lt;/p&gt;
+
+&lt;p&gt;I have finally set up Jekyll on Windows and, believe it or not, it works like a charm. A big thank should go to the creator of this nice &lt;a href=&quot;http://jekyll-windows.juthilo.com/&quot;&gt;guide&lt;/a&gt;, which is, btw, a GitHub page!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 27 May 2015 18:03:49 +0200</pubDate>
+        <link>http://mauroleonelli.com/tech/2015/05/27/run-jekyll-on-windows.html</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/05/27/run-jekyll-on-windows.html</guid>
+        
+        <category>tech</category>
+        
+        <category>jekyll</category>
+        
+        <category>github</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+      <item>
+        <title>A simple way to publish your site to GitHub</title>
+        <description>&lt;p&gt;Jekyll is a wonderful templating engine which works perfectly with GitHub. You can have your wonderful static website up and running in few minutes, hosted and built seamlessly by &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There is indeed a limitation to this perfect world: GitHub will build Jekyll in –safe mode thus not allowing any Jekyll plugin.&lt;/p&gt;
+
+&lt;p&gt;I have been struggling to find a noob way to publish my GitHub page and version the source control at the same time.&lt;/p&gt;
+
+&lt;p&gt;A quick &amp;amp; dirty solution is to create two local repositories pointing to the corresponding GitHub remotes: master (for the site) and source (for the source code). First let’s setup the local folders.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;mkdir master
+mkdir &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;master
+git init
+git remote add -t master origin &amp;lt;remote-url&amp;gt;
+
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../source
+git init
+git remote add -t &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;origin &amp;lt;remote-url&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With the folders created as before, you can then install Jekyll in source, make your editing. Then create a small shell script that will:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Build Jekyll&lt;/li&gt;
+  &lt;li&gt;Copy the site to the master folder&lt;/li&gt;
+  &lt;li&gt;Push it to GitHub&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+jekyll build
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_site
+cp -r * ../../master/
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../../master
+git add --all
+git commit -m &lt;span class=&quot;s2&quot;&gt;&amp;quot;Updating blog&amp;quot;&lt;/span&gt;
+git push -f origin master
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../source&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 22 Nov 2014 17:03:49 +0100</pubDate>
+        <link>http://mauroleonelli.com/tech/2014/11/22/a-simple-way-to-publish-your-site-to-github.html</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/tech/2014/11/22/a-simple-way-to-publish-your-site-to-github.html</guid>
+        
+        <category>tech</category>
+        
+        <category>jekyll</category>
+        
+        <category>github</category>
+        
+        
+        <category>tech</category>
+        
+      </item>
+    
+  </channel>
+</rss>

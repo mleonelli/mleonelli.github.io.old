@@ -93,7 +93,7 @@
 
     <div class="page-content">
       <div class="wrapper container">
-         <div class="primary col-md-9">
+         <div class="primary col-md-12">
            <div class="post">
 
  <header class="post-header">
@@ -111,9 +111,9 @@
 <p>A quick &amp; dirty solution is to create two local repositories pointing to the corresponding GitHub remotes: master (for the site) and source (for the source code). First let’s setup the local folders.</p>
 
 <div class="highlight"><pre><code class="language-sh" data-lang="sh">mkdir master
-mkdir <span class="nb">source</span>
+mkdir <span class="nb">source
 
-<span class="nb">cd </span>master
+cd </span>master
 git init
 git remote add -t master origin &lt;remote-url&gt;
 
@@ -132,10 +132,10 @@ git remote add -t <span class="nb">source </span>origin &lt;remote-url&gt;</code
 <div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
 jekyll build
 <span class="nb">cd </span>_site
-cp -r * ../../master/
+cp -r <span class="k">*</span> ../../master/
 <span class="nb">cd</span> ../../master
 git add --all
-git commit -m <span class="s2">&quot;Updating blog&quot;</span>
+git commit -m <span class="s2">"Updating blog"</span>
 git push -f origin master
 <span class="nb">cd</span> ../source</code></pre></div>
 
@@ -157,11 +157,6 @@ git push -f origin master
 </div>
 
          </div>
-
-        <aside class="col-md-3 secondary vcard author clearfix" role="complementary">
-        <img alt="A photo of Mauro Leonelli" class="secondary-photo media-circle photo" src="https://avatars1.githubusercontent.com/u/4825294?v=3&s=460">
-        <p>Hi, I’m <strong class="fn">Mauro Leonelli</strong> and I’m a <strong>Web & New Media PM</strong> and passionate <strong>C# developer</strong>. Learn more <a href="/about/" class="url">about me</a>.</p><p>I believe in social networking, so if you have any question or comment, if you need consultancy or you want to make some serious business :) please do not hesitate to <a href="mailto:mleonelli@gmail.com" class="email">contact me</a>.</p>
-    </aside>
       </div>
       
     </div>
@@ -176,7 +171,7 @@ git push -f origin master
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
           <li>Mauro Leonelli</li>
-          <li><a href="mailto:mleonelli [at] gmail [dot] com">mleonelli [at] gmail [dot] com</a></li>
+          <li><a href="mailto:mleonelli@gmail.com">mleonelli [at] gmail [dot] com</a></li>
         </ul>
         <ul class="social-media-list">
           

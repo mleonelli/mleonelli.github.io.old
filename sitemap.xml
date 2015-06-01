@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://mauroleonelli.com/tech/2015/05/29/decode-encode-unicode-tsql.html</loc>
+    <lastmod>2015-05-29T18:03:49+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://mauroleonelli.com/tech/2015/05/27/run-jekyll-on-windows.html</loc>
+    <lastmod>2015-05-27T18:03:49+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://mauroleonelli.com/tech/2014/11/22/a-simple-way-to-publish-your-site-to-github.html</loc>
+    <lastmod>2014-11-22T17:03:49+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://mauroleonelli.com/about/</loc>
+  </url>
+  <url>
+    <loc>http://mauroleonelli.com/</loc>
+  </url>
+  <url>
+    <loc>http://mauroleonelli.com/Resources/</loc>
+  </url>
+  <url>
+    <loc>http://mauroleonelli.com/git/resources/</loc>
+  </url>
+  <url>
+    <loc>http://mauroleonelli.com/js/resources/</loc>
+  </url>
+</urlset>

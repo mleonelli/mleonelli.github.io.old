@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1">
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" >
 
   <title>Decode and Encode Unicode data in SQL Server</title>
@@ -26,7 +25,12 @@
   <body>
 
     <header class="site-header">
-
+  <div id="cookies-eu-banner" style="display: none;">
+        By continuing your visit to this site, you accept the use of cookies by Google Analytics to make visits statistics.
+        <a href="./more-info/" id="cookies-eu-more">Read more</a>
+        <!--<button id="cookies-eu-reject">Reject</button>-->
+        <button id="cookies-eu-accept">Accept</button>
+    </div>
   <div class="wrapper">
     <a class="site-title" href="/">
     <svg xmlns="http://www.w3.org/2000/svg" style="width:90px; height: 90px">
@@ -72,6 +76,8 @@
         
           
           
+          
+        
           
         
           
@@ -244,17 +250,21 @@ There are 65,535 Unicode character in total.</p>
 
 </footer>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
+<script src="/js/cookies-eu-banner.js ">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+$(document).ready(function(){
+new CookiesEuBanner(function(){
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-57001962-1', 'auto');
-  ga('require', 'linkid', 'linkid.js');
-  ga('send', 'pageview');
+		  ga('create', 'UA-57001962-1', 'auto');
+		  ga('require', 'linkid', 'linkid.js');
+		  ga('send', 'pageview');
+    }, true);
+  });
 
 </script>
 

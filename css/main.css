@@ -29,6 +29,12 @@ ul, ol, dl, figure,
   margin-bottom: 15px; }
 
 /**
+ * Tables
+ */
+table tr th, table tr td {
+  padding: 5px; }
+
+/**
  * Images
  */
 img {

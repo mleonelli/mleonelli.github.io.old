@@ -8,3 +8,4 @@ gem 'wdm', '>=0.1.0' if Gem.win_platform?
 gem 'jemoji'
 gem 'jekyll-sitemap'
 gem 'html-proofer'
+gem 'rouge'

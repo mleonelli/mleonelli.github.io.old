@@ -6,8 +6,8 @@
 </description>
     <link>http://mauroleonelli.com/</link>
     <atom:link href="http://mauroleonelli.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 06 Aug 2015 14:34:00 -0400</pubDate>
-    <lastBuildDate>Thu, 06 Aug 2015 14:34:00 -0400</lastBuildDate>
+    <pubDate>Wed, 12 Aug 2015 13:39:00 +0200</pubDate>
+    <lastBuildDate>Wed, 12 Aug 2015 13:39:00 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -232,7 +232,7 @@ L898902C&amp;lt;3ITA6908061F9406236ZE184226B&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp
 $/xm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Fri, 31 Jul 2015 12:03:49 -0400</pubDate>
+        <pubDate>Fri, 31 Jul 2015 18:03:49 +0200</pubDate>
         <link>http://mauroleonelli.com/tech/2015/07/31/machine-readable-passport-regex.html</link>
         <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/07/31/machine-readable-passport-regex.html</guid>
         
@@ -269,7 +269,7 @@ $/xm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Mon, 15 Jun 2015 12:03:49 -0400</pubDate>
+        <pubDate>Mon, 15 Jun 2015 18:03:49 +0200</pubDate>
         <link>http://mauroleonelli.com/tech/2015/06/15/remove-last-character-in-a-string.html</link>
         <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/06/15/remove-last-character-in-a-string.html</guid>
         
@@ -348,7 +348,7 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;END&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Fri, 29 May 2015 12:03:49 -0400</pubDate>
+        <pubDate>Fri, 29 May 2015 18:03:49 +0200</pubDate>
         <link>http://mauroleonelli.com/tech/2015/05/29/decode-encode-unicode-tsql.html</link>
         <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/05/29/decode-encode-unicode-tsql.html</guid>
         
@@ -372,7 +372,7 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 &lt;p&gt;I have finally set up Jekyll on Windows and, believe it or not, it works like a charm. A big thank should go to the creator of this nice &lt;a href=&quot;http://jekyll-windows.juthilo.com/&quot;&gt;guide&lt;/a&gt;, which is, btw, a GitHub page!&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 27 May 2015 12:03:49 -0400</pubDate>
+        <pubDate>Wed, 27 May 2015 18:03:49 +0200</pubDate>
         <link>http://mauroleonelli.com/tech/2015/05/27/run-jekyll-on-windows.html</link>
         <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/05/27/run-jekyll-on-windows.html</guid>
         
@@ -427,7 +427,7 @@ git push -f origin master
 &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../source&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
-        <pubDate>Sat, 22 Nov 2014 11:03:49 -0500</pubDate>
+        <pubDate>Sat, 22 Nov 2014 17:03:49 +0100</pubDate>
         <link>http://mauroleonelli.com/tech/2014/11/22/a-simple-way-to-publish-your-site-to-github.html</link>
         <guid isPermaLink="true">http://mauroleonelli.com/tech/2014/11/22/a-simple-way-to-publish-your-site-to-github.html</guid>
         

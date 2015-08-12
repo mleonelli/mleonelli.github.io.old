@@ -7,17 +7,18 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" >
 
-  <title>Remove the last character in a SQL string</title>
+  <title>Archive</title>
   
   
-  <meta name="description" content="Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (..." />
+  <meta name="description" content="Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.
+" />
   
   
   
-  <meta name="keywords" content="Mauro Leonelli, freelancer, development, project management, SQL server, REVERSE, remove last character" />
+  <meta name="keywords" content="Mauro Leonelli, freelancer, development, project management" />
   
   <link rel="stylesheet" href="http://mauroleonelli.com/css/main.css ">
-  <link rel="canonical" href="http://mauroleonelli.com/tech/2015/06/15/remove-last-character-in-a-string.html">
+  <link rel="canonical" href="http://mauroleonelli.com/archive/">
   <link rel="alternate" type="application/atom+xml" title="Mauro Leonelli" href="http://mauroleonelli.com/feed.xml" />
 </head>
 
@@ -102,48 +103,62 @@
          <div class="primary col-md-12">
            <div class="post">
 
- <header class="post-header">
-    <h1 class="post-title">Remove the last character in a SQL string</h1>
-    <p class="post-meta">Jun 15, 2015 by Mauro  •  Reading time: less than 1 minute</p>
+  <header class="post-header">
+    <h1 class="post-title">Archive</h1>
   </header>
 
   <article class="post-content">
-    <p>Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…).</p>
+    <ul>
+  
 
-<p>On many sites they propose different techniques to remove characters from the end of a string by mean of SUBSTRINGs, LEFTs AND DATALENGTHs</p>
+    
+      <h3>2015</h3>
+    
 
-<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DECLARE</span> <span class="o">@</span><span class="n">String</span> <span class="k">as</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-<span class="k">SET</span> <span class="o">@</span><span class="n">String</span><span class="o">=</span><span class="s1">'1,2,3,4,5,'</span>
+    <li>31 Jul <a href="/tech/2015/07/31/machine-readable-passport-regex.html">Regex considerations for Machine Readable Passport</a></li>
+  
 
-<span class="k">SELECT</span> <span class="k">LEFT</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">,</span><span class="n">DATALENGTH</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+      
+      
+      
+    
 
-<span class="k">SELECT</span> <span class="n">STUFF</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">,</span><span class="n">DATALENGTH</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+    <li>15 Jun <a href="/tech/2015/06/15/remove-last-character-in-a-string.html">Remove the last character in a SQL string</a></li>
+  
 
-<span class="k">SELECT</span> <span class="n">STUFF</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">,</span><span class="n">DATALENGTH</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span></code></pre></div>
+    
+      
+      
+      
+    
 
-<p>As you can clearly see, all of them require the string to be used twice, whici is totally legit but pretty annoying if you want to do it in your select command.</p>
+    <li>29 May <a href="/tech/2015/05/29/decode-encode-unicode-tsql.html">Decode and Encode Unicode data in SQL Server</a></li>
+  
 
-<p>Another approach that can be used “inline” makes use of the REVERSE and STUFF commands. Easy!</p>
+    
+      
+      
+      
+    
 
-<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DECLARE</span> <span class="o">@</span><span class="n">String</span> <span class="k">as</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-<span class="k">SET</span> <span class="o">@</span><span class="n">String</span><span class="o">=</span><span class="s1">'1,2,3,4,5,'</span>
-<span class="k">select</span> <span class="n">reverse</span><span class="p">(</span><span class="n">stuff</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">''</span><span class="p">))</span></code></pre></div>
+    <li>27 May <a href="/tech/2015/05/27/run-jekyll-on-windows.html">Run Jekyll on Windows</a></li>
+  
 
+    
+      
+      
+      
+        <h3>2014</h3>
+      
+    
+
+    <li>22 Nov <a href="/tech/2014/11/22/a-simple-way-to-publish-your-site-to-github.html">A simple way to publish your site to GitHub</a></li>
+  
+</ul>
 
   </article>
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'mauroleonelli'; // required: replace example with your forum shortname
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 
          </div>

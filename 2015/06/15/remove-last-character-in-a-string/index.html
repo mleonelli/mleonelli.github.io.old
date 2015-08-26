@@ -7,17 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Git Websites - Mauro Leonelli</title>
+    <title>Remove the last character in a SQL string - Mauro Leonelli</title>
     
-      <meta name="description" content="Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.
-" />
+      <meta name="description" content="Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (..." />
     
   
     
-      <meta name="keywords" content="Mauro Leonelli, freelancer, development, project management" />
+      <meta name="keywords" content="Mauro Leonelli, freelancer, development, project management, SQL server, REVERSE, remove last character" />
     
 
-    <link rel="canonical" href="http://mauroleonelli.com/git/resources/">
+    <link rel="canonical" href="http://mauroleonelli.com/2015/06/15/remove-last-character-in-a-string/">
     <link rel="alternate" type="application/atom+xml" title="Mauro Leonelli" href="http://mauroleonelli.com/feed.xml" />
 	
     <!-- Bootstrap Core CSS -->
@@ -83,42 +82,69 @@
 </nav>
 
 
-    <!-- Page Header -->
+    <!-- Post Header -->
 <header class="intro-header" style="background-image: url('/')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Git Websites</h1>
+                <div class="post-heading">
+                    <h1>Remove the last character in a SQL string</h1>
                     
-                    <span class="subheading"></span>
+                    <span class="meta">Posted by Mauro Leonelli on June 15, 2015 - Reading time: less than 1 minute</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<p><a href="http://gitimmersion.com/index.html">Git Immersion</a></p>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<p><a href="http://gitready.com">Git Ready</a></p>
+				<p>Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…).</p>
 
-<p><a href="http://www.ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></p>
+<p>On many sites they propose different techniques to remove characters from the end of a string by mean of SUBSTRINGs, LEFTs AND DATALENGTHs</p>
 
-<p><a href="http://www.ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></p>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DECLARE</span> <span class="o">@</span><span class="n">String</span> <span class="k">as</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="k">SET</span> <span class="o">@</span><span class="n">String</span><span class="o">=</span><span class="s1">'1,2,3,4,5,'</span>
 
-<p><a href="http://ftp.newartisans.com/pub/git.from.bottom.up.pdf">Git From Bottom Up</a></p>
+<span class="k">SELECT</span> <span class="k">LEFT</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">,</span><span class="n">DATALENGTH</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">SELECT</span> <span class="n">STUFF</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">,</span><span class="n">DATALENGTH</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span>
+
+<span class="k">SELECT</span> <span class="n">STUFF</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">,</span><span class="n">DATALENGTH</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">''</span><span class="p">)</span></code></pre></div>
+
+<p>As you can clearly see, all of them require the string to be used twice, whici is totally legit but pretty annoying if you want to do it in your select command.</p>
+
+<p>Another approach that can be used “inline” makes use of the REVERSE and STUFF commands. Easy!</p>
+
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">DECLARE</span> <span class="o">@</span><span class="n">String</span> <span class="k">as</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="k">SET</span> <span class="o">@</span><span class="n">String</span><span class="o">=</span><span class="s1">'1,2,3,4,5,'</span>
+<span class="k">select</span> <span class="n">reverse</span><span class="p">(</span><span class="n">stuff</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="o">@</span><span class="n">String</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">''</span><span class="p">))</span></code></pre></div>
 
 
 
+                <hr>
 
-		</div>
-	</div>
-</div>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2015/05/29/decode-encode-unicode-tsql/" data-toggle="tooltip" data-placement="top" title="Decode and Encode Unicode data in SQL Server">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2015/07/31/machine-readable-passport-regex/" data-toggle="tooltip" data-placement="top" title="Regex considerations for Machine Readable Passport">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 

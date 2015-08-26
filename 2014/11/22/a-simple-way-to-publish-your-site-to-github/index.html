@@ -7,17 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Git Websites - Mauro Leonelli</title>
+    <title>A simple way to publish your site to GitHub - Mauro Leonelli</title>
     
-      <meta name="description" content="Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.
-" />
+      <meta name="description" content="Jekyll is a wonderful templating engine which works perfectly with GitHub. You can have your wonderful static website up and running in few minutes, hosted a..." />
     
   
     
-      <meta name="keywords" content="Mauro Leonelli, freelancer, development, project management" />
+      <meta name="keywords" content="Mauro Leonelli, freelancer, development, project management, Jekyll, Github pages" />
     
 
-    <link rel="canonical" href="http://mauroleonelli.com/git/resources/">
+    <link rel="canonical" href="http://mauroleonelli.com/2014/11/22/a-simple-way-to-publish-your-site-to-github/">
     <link rel="alternate" type="application/atom+xml" title="Mauro Leonelli" href="http://mauroleonelli.com/feed.xml" />
 	
     <!-- Bootstrap Core CSS -->
@@ -83,42 +82,81 @@
 </nav>
 
 
-    <!-- Page Header -->
+    <!-- Post Header -->
 <header class="intro-header" style="background-image: url('/')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Git Websites</h1>
+                <div class="post-heading">
+                    <h1>A simple way to publish your site to GitHub</h1>
                     
-                    <span class="subheading"></span>
+                    <span class="meta">Posted by Mauro Leonelli on November 22, 2014 - Reading time: about 1  minute</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			
-<p><a href="http://gitimmersion.com/index.html">Git Immersion</a></p>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-<p><a href="http://gitready.com">Git Ready</a></p>
+				<p>Jekyll is a wonderful templating engine which works perfectly with GitHub. You can have your wonderful static website up and running in few minutes, hosted and built seamlessly by <a href="http://github.com">Github</a>.</p>
 
-<p><a href="http://www.ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></p>
+<p>There is indeed a limitation to this perfect world: GitHub will build Jekyll in –safe mode thus not allowing any Jekyll plugin.</p>
 
-<p><a href="http://www.ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></p>
+<p>I have been struggling to find a noob way to publish my GitHub page and version the source control at the same time.</p>
 
-<p><a href="http://ftp.newartisans.com/pub/git.from.bottom.up.pdf">Git From Bottom Up</a></p>
+<p>A quick &amp; dirty solution is to create two local repositories pointing to the corresponding GitHub remotes: master (for the site) and source (for the source code). First let’s setup the local folders.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">mkdir master
+mkdir <span class="nb">source
+
+cd </span>master
+git init
+git remote add -t master origin &lt;remote-url&gt;
+
+<span class="nb">cd</span> ../source
+git init
+git remote add -t <span class="nb">source </span>origin &lt;remote-url&gt;</code></pre></div>
+
+<p>With the folders created as before, you can then install Jekyll in source, make your editing. Then create a small shell script that will:</p>
+
+<ol>
+  <li>Build Jekyll</li>
+  <li>Copy the site to the master folder</li>
+  <li>Push it to GitHub</li>
+</ol>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/sh</span>
+jekyll build
+<span class="nb">cd </span>_site
+cp -r <span class="k">*</span> ../../master/
+<span class="nb">cd</span> ../../master
+git add --all
+git commit -m <span class="s2">"Updating blog"</span>
+git push -f origin master
+<span class="nb">cd</span> ../source</code></pre></div>
 
 
 
+                <hr>
 
-		</div>
-	</div>
-</div>
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2015/05/27/run-jekyll-on-windows/" data-toggle="tooltip" data-placement="top" title="Run Jekyll on Windows">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
 
 <hr>
 

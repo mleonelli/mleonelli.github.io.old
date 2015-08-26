@@ -6,14 +6,15 @@
 </description>
     <link>http://mauroleonelli.com/</link>
     <atom:link href="http://mauroleonelli.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Aug 2015 13:39:00 +0200</pubDate>
-    <lastBuildDate>Wed, 12 Aug 2015 13:39:00 +0200</lastBuildDate>
+    <pubDate>Wed, 26 Aug 2015 10:11:41 +0200</pubDate>
+    <lastBuildDate>Wed, 26 Aug 2015 10:11:41 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Regex considerations for Machine Readable Passport</title>
         <description>&lt;p&gt;For a recent project I was looking into Passport Numbers and the, apparently, impossibility to validate them. From there I played with MRTDs or Machine Readable Travel Documents and passports are nowadays one of those, making the customs procedures faster ( unless you land in Miami, then it’s going to be a mess anyway ).&lt;/p&gt;
 
+&lt;!--more--&gt;
 &lt;p&gt;On a MR Passport there are two lines. Each is 44 characters long, with a filler character &amp;lt; (less sign) in case an empty space is needed. Here’s an example of a fictional MR Passport code.&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-regex&quot; data-lang=&quot;regex&quot;&gt;P&amp;lt;ITADAVINCI&amp;lt;&amp;lt;LEONARDO&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
@@ -233,15 +234,13 @@ $/xm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Fri, 31 Jul 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/tech/2015/07/31/machine-readable-passport-regex.html</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/07/31/machine-readable-passport-regex.html</guid>
+        <link>http://mauroleonelli.com/2015/07/31/machine-readable-passport-regex/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/2015/07/31/machine-readable-passport-regex/</guid>
         
         <category>tech</category>
         
         <category>regex</category>
         
-        
-        <category>tech</category>
         
       </item>
     
@@ -270,15 +269,13 @@ $/xm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Mon, 15 Jun 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/tech/2015/06/15/remove-last-character-in-a-string.html</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/06/15/remove-last-character-in-a-string.html</guid>
+        <link>http://mauroleonelli.com/2015/06/15/remove-last-character-in-a-string/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/2015/06/15/remove-last-character-in-a-string/</guid>
         
         <category>tech</category>
         
         <category>sql</category>
         
-        
-        <category>tech</category>
         
       </item>
     
@@ -349,15 +346,13 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 29 May 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/tech/2015/05/29/decode-encode-unicode-tsql.html</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/05/29/decode-encode-unicode-tsql.html</guid>
+        <link>http://mauroleonelli.com/2015/05/29/decode-encode-unicode-tsql/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/2015/05/29/decode-encode-unicode-tsql/</guid>
         
         <category>tech</category>
         
         <category>sql</category>
         
-        
-        <category>tech</category>
         
       </item>
     
@@ -373,8 +368,8 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 27 May 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/tech/2015/05/27/run-jekyll-on-windows.html</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/tech/2015/05/27/run-jekyll-on-windows.html</guid>
+        <link>http://mauroleonelli.com/2015/05/27/run-jekyll-on-windows/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/2015/05/27/run-jekyll-on-windows/</guid>
         
         <category>tech</category>
         
@@ -382,8 +377,6 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
         
         <category>github</category>
         
-        
-        <category>tech</category>
         
       </item>
     
@@ -428,8 +421,8 @@ git push -f origin master
 
 </description>
         <pubDate>Sat, 22 Nov 2014 17:03:49 +0100</pubDate>
-        <link>http://mauroleonelli.com/tech/2014/11/22/a-simple-way-to-publish-your-site-to-github.html</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/tech/2014/11/22/a-simple-way-to-publish-your-site-to-github.html</guid>
+        <link>http://mauroleonelli.com/2014/11/22/a-simple-way-to-publish-your-site-to-github/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/2014/11/22/a-simple-way-to-publish-your-site-to-github/</guid>
         
         <category>tech</category>
         
@@ -437,8 +430,6 @@ git push -f origin master
         
         <category>github</category>
         
-        
-        <category>tech</category>
         
       </item>
     

@@ -29,7 +29,8 @@
         init: function(){
             // Do nothing if it is a bot
             // If DoNotTrack is activated, do nothing too
-            if(this.isBot() || !this.isToTrack() || this.hasConsent() === false){
+            if(this.isBot() //|| !this.isToTrack() 
+                || this.hasConsent() === false){
                 return false;
             }
 

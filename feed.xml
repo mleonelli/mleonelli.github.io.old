@@ -6,9 +6,29 @@
 </description>
     <link>http://mauroleonelli.com/</link>
     <atom:link href="http://mauroleonelli.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 Aug 2015 10:34:06 +0200</pubDate>
-    <lastBuildDate>Fri, 28 Aug 2015 10:34:06 +0200</lastBuildDate>
+    <pubDate>Wed, 02 Sep 2015 10:55:12 +0200</pubDate>
+    <lastBuildDate>Wed, 02 Sep 2015 10:55:12 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Duolingo Russian available on 10th September</title>
+        <description>&lt;p&gt;I was monitoring this course since a long time and finally it seems it’s gonna happen: Duolingo Russian is finally coming!&lt;/p&gt;
+
+&lt;p&gt;98% of the course is ready and Duolingo expects it to be launched on the 10th of September.&lt;/p&gt;
+
+&lt;p&gt;While Duolingo it may be a “simple” language course, compared to other solutions around, its wonderful interface has proved to be terrific especially for “exotic” languages. I’ll test it as soon as it comes out!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 02 Sep 2015 18:03:49 +0200</pubDate>
+        <link>http://mauroleonelli.com/2015/09/02/Duolingo-russian-soon-available/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/2015/09/02/Duolingo-russian-soon-available/</guid>
+        
+        <category>language</category>
+        
+        <category>duolingo</category>
+        
+        
+      </item>
     
       <item>
         <title>Regex considerations for Machine Readable Passport</title>

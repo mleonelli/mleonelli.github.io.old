@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://mauroleonelli.com/2015/09/02/Duolingo-russian-soon-available/</loc>
+    <lastmod>2015-09-02T18:03:49+02:00</lastmod>
+  </url>
+  <url>
     <loc>http://mauroleonelli.com/2015/07/31/machine-readable-passport-regex/</loc>
     <lastmod>2015-07-31T18:03:49+02:00</lastmod>
   </url>
@@ -43,5 +47,8 @@
   </url>
   <url>
     <loc>http://mauroleonelli.com/resources/</loc>
+  </url>
+  <url>
+    <loc>http://mauroleonelli.com/archives/page/2/</loc>
   </url>
 </urlset>

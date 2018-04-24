@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mauro Leonelli</title>
-    <description>Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.
-</description>
+    <description>Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.</description>
     <link>http://mauroleonelli.com/</link>
     <atom:link href="http://mauroleonelli.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Sep 2015 15:50:33 +0200</pubDate>
-    <lastBuildDate>Wed, 02 Sep 2015 15:50:33 +0200</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Tue, 24 Apr 2018 10:41:01 +0200</pubDate>
+    <lastBuildDate>Tue, 24 Apr 2018 10:41:01 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.0</generator>
     
+      
       <item>
         <title>Duolingo Russian available on 10th September</title>
         <description>&lt;p&gt;I was monitoring this course since a long time and finally it seems it’s gonna happen: Duolingo Russian is finally coming!&lt;/p&gt;
@@ -19,9 +19,18 @@
 &lt;p&gt;While Duolingo it may be a “simple” language course, compared to other solutions around, its wonderful interface has proved to be terrific especially for “exotic” languages. I’ll test it as soon as it comes out!&lt;/p&gt;
 
 </description>
+        
+          <description>&lt;p&gt;I was monitoring this course since a long time and finally it seems it’s gonna happen: Duolingo Russian is finally coming!&lt;/p&gt;
+
+&lt;p&gt;98% of the course is ready and Duolingo expects it to be launched on the 10th of September.&lt;/p&gt;
+
+&lt;p&gt;While Duolingo it may be a “simple” language course, compared to other solutions around, its wonderful interface has proved to be terrific especially for “exotic” languages. I’ll test it as soon as it comes out!&lt;/p&gt;
+
+</description>
+        
         <pubDate>Wed, 02 Sep 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/2015/09/02/Duolingo-russian-soon-available/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/2015/09/02/Duolingo-russian-soon-available/</guid>
+        <link>http://mauroleonelli.com/blog/Duolingo-russian-soon-available/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/Duolingo-russian-soon-available/</guid>
         
         <category>language</category>
         
@@ -29,7 +38,9 @@
         
         
       </item>
+      
     
+      
       <item>
         <title>Regex considerations for Machine Readable Passport</title>
         <description>&lt;p&gt;For a recent project I was looking into Passport Numbers and the, apparently, impossibility to validate them. From there I played with MRTDs or Machine Readable Travel Documents and passports are nowadays one of those, making the customs procedures faster ( unless you land in Miami, then it’s going to be a mess anyway ).&lt;/p&gt;
@@ -37,8 +48,8 @@
 &lt;!--more--&gt;
 &lt;p&gt;On a MR Passport there are two lines. Each is 44 characters long, with a filler character &amp;lt; (less sign) in case an empty space is needed. Here’s an example of a fictional MR Passport code.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-regex&quot; data-lang=&quot;regex&quot;&gt;P&amp;lt;ITADAVINCI&amp;lt;&amp;lt;LEONARDO&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
-L898902C&amp;lt;3ITA6908061F9406236ZE184226B&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;14&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-regex&quot; data-lang=&quot;regex&quot;&gt;P&amp;lt;ITADAVINCI&amp;lt;&amp;lt;LEONARDO&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;
+L898902C&amp;lt;3ITA6908061F9406236ZE184226B&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;14&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;As can be found on the &lt;a href=&quot;https://en.wikipedia.org/wiki/Machine-readable_passport&quot;&gt;Wikipedia page&lt;/a&gt;, the format of the first row can be defined as&lt;/p&gt;
 
@@ -193,7 +204,7 @@ L898902C&amp;lt;3ITA6908061F9406236ZE184226B&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp
 
 &lt;p&gt;Below the implementation or to see it in a better format the same version can be found on &lt;a href=&quot;https://regex101.com/r/kI6aG3/6&quot;&gt;Regex101&lt;/a&gt;; I am planning to give it a check in the near future to see if I can make it better…&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-regex&quot; data-lang=&quot;regex&quot;&gt;/^
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-regex&quot; data-lang=&quot;regex&quot;&gt;/^
 (?&amp;lt;FirstLine&amp;gt;
   # First line capturing group
   (?&amp;lt;Passport&amp;gt;P)
@@ -250,12 +261,17 @@ L898902C&amp;lt;3ITA6908061F9406236ZE184226B&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp
   (?&amp;lt;CheckDigitF&amp;gt;[0-9])
   # Check digit
 )
-$/xm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+$/xm&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
+        
+          <description>&lt;p&gt;For a recent project I was looking into Passport Numbers and the, apparently, impossibility to validate them. From there I played with MRTDs or Machine Readable Travel Documents and passports are nowadays one of those, making the customs procedures faster ( unless you land in Miami, then it’s going to be a mess anyway ).&lt;/p&gt;
+
+</description>
+        
         <pubDate>Fri, 31 Jul 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/2015/07/31/machine-readable-passport-regex/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/2015/07/31/machine-readable-passport-regex/</guid>
+        <link>http://mauroleonelli.com/blog/machine-readable-passport-regex/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/machine-readable-passport-regex/</guid>
         
         <category>tech</category>
         
@@ -263,34 +279,63 @@ $/xm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
         
         
       </item>
+      
     
+      
       <item>
         <title>Remove the last character in a SQL string</title>
         <description>&lt;p&gt;Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…).&lt;/p&gt;
 
 &lt;p&gt;On many sites they propose different techniques to remove characters from the end of a string by mean of SUBSTRINGs, LEFTs AND DATALENGTHs&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;DECLARE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VARCHAR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;1,2,3,4,5,&#39;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;DECLARE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VARCHAR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'1,2,3,4,5,'&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;LEFT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATALENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;STUFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATALENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;STUFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATALENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;STUFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATALENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;STUFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DATALENGTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;As you can clearly see, all of them require the string to be used twice, whici is totally legit but pretty annoying if you want to do it in your select command.&lt;/p&gt;
 
 &lt;p&gt;Another approach that can be used “inline” makes use of the REVERSE and STUFF commands. Easy!&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;DECLARE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VARCHAR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;1,2,3,4,5,&#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;DECLARE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VARCHAR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'1,2,3,4,5,'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
+        
+          <description>&lt;p&gt;Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…).&lt;/p&gt;
+
+&lt;p&gt;On many sites they propose different techniques to remove characters from the end of a string by mean of SUBSTRINGs, LEFTs AND DATALENGTHs
+{% highlight sql%}
+DECLARE @String as VARCHAR(50)
+SET @String=’1,2,3,4,5,’&lt;/p&gt;
+
+&lt;p&gt;SELECT LEFT(@String,DATALENGTH(@String)-1)&lt;/p&gt;
+
+&lt;p&gt;SELECT STUFF(@String,DATALENGTH(@String), 1, ‘’)&lt;/p&gt;
+
+&lt;p&gt;SELECT STUFF(@String,DATALENGTH(@String), 1, ‘’)
+{% endhighlight %}&lt;/p&gt;
+
+&lt;p&gt;As you can clearly see, all of them require the string to be used twice, whici is totally legit but pretty annoying if you want to do it in your select command.&lt;/p&gt;
+
+&lt;p&gt;Another approach that can be used “inline” makes use of the REVERSE and STUFF commands. Easy!&lt;/p&gt;
+
+&lt;p&gt;{% highlight sql%}
+DECLARE @String as VARCHAR(50)
+SET @String=’1,2,3,4,5,’
+select reverse(stuff(reverse(@String), 1, 1, ‘’))
+{% endhighlight %}&lt;/p&gt;
+
+</description>
+        
         <pubDate>Mon, 15 Jun 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/2015/06/15/remove-last-character-in-a-string/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/2015/06/15/remove-last-character-in-a-string/</guid>
+        <link>http://mauroleonelli.com/blog/jekyll_metas/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/jekyll_metas/</guid>
         
         <category>tech</category>
         
@@ -298,7 +343,9 @@ $/xm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
         
         
       </item>
+      
     
+      
       <item>
         <title>Decode and Encode Unicode data in SQL Server</title>
         <description>&lt;p&gt;While working on a internet and intranet website with detailed description of cities around the world, I faced difficulties in the encoding and decoding of Unicode data.&lt;/p&gt;
@@ -310,10 +357,10 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 
 &lt;p&gt;Below two utility queries to encode and decode Unicode in SQL Server.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FUNCTION&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecodeUnicode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FUNCTION&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecodeUnicode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nvarchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
-    &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;amp;#&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;suffix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;;&#39;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;#'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;suffix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;';'&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;RETURNS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nvarchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;MAX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt;
@@ -337,8 +384,8 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 
 &lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FUNCTION&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EncodeUnicode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
     &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nvarchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; 
-    &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;amp;#&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-    &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;suffix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;;&#39;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;prefix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;#'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+    &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;suffix&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;';'&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;RETURNS&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nvarchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt;
@@ -348,7 +395,7 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
   &lt;span class=&quot;k&quot;&gt;DECLARE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nvarchar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
   &lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;
 
   &lt;span class=&quot;n&quot;&gt;WHILE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LEN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	
     &lt;span class=&quot;k&quot;&gt;BEGIN&lt;/span&gt;
@@ -362,12 +409,80 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 
   &lt;span class=&quot;k&quot;&gt;RETURN&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;output&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;END&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;k&quot;&gt;END&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
+        
+          <description>&lt;p&gt;While working on a internet and intranet website with detailed description of cities around the world, I faced difficulties in the encoding and decoding of Unicode data.&lt;/p&gt;
+
+&lt;p&gt;SQL Server can store &lt;a href=&quot;http://en.wikipedia.org/wiki/Unicode&quot;&gt;Unicode&lt;/a&gt; data with the nvarchar data type, but encoding and decoding a string into real Unicode is a bit less straightforward than it may seem.&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_Unicode_characters&quot;&gt;Unicode character&lt;/a&gt; like ķ, a.k.a latin small K with cedilla, can be represented as ķ in other words a prefix (&amp;amp;#), a 3 to 5 digit code and a suffix (;).&lt;br /&gt;
+There are 65,535 Unicode character in total.&lt;/p&gt;
+
+&lt;p&gt;Below two utility queries to encode and decode Unicode in SQL Server.&lt;/p&gt;
+
+&lt;p&gt;{% highlight sql%}&lt;/p&gt;
+
+&lt;p&gt;CREATE FUNCTION DecodeUnicode(
+    @data nvarchar(MAX), 
+    @prefix varchar(100)  = ‘&amp;amp;#’,
+    @suffix varchar(100) = ‘;’
+)
+RETURNS nvarchar(MAX)
+AS
+BEGIN
+  DECLARE @start int
+  DECLARE @end int&lt;/p&gt;
+
+&lt;p&gt;WHILE CHARINDEX(@prefix, @data) &amp;gt; 0
+  BEGIN
+      SET @start = CHARINDEX(@prefix, @data)
+      SET @end = CHARINDEX(@suffix, @data, @start)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  SET @data = REPLACE(
+       @data, 
+       SUBSTRING(@data, @start, @end -@start + LEN(@suffix)),
+       NCHAR(SUBSTRING(@data, @start+ LEN(@prefix),@end -@start - LEN(@prefix)))
+  )   END   RETURN @data END
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;CREATE FUNCTION EncodeUnicode(
+    @data nvarchar(max), 
+    @prefix varchar(10) = ‘&amp;amp;#’, 
+    @suffix varchar(10) = ‘;’
+)
+RETURNS nvarchar(max)
+AS
+BEGIN&lt;/p&gt;
+
+&lt;p&gt;DECLARE @i Int
+  DECLARE @output nvarchar(max)&lt;/p&gt;
+
+&lt;p&gt;SET @i = 1
+  SET @output = ‘’&lt;/p&gt;
+
+&lt;p&gt;WHILE @i &amp;lt;= LEN(@data)	
+    BEGIN
+      If Unicode(SUBSTRING(@data, @i, 1)) &amp;gt; 255
+        SET @output = @output + @prefix + CONVERT(varchar(5),Unicode(SUBSTRING(@data, @i, 1))) + @suffix
+      Else
+        SET @output = @output + SUBSTRING(@data, @i, 1)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  SET @i = @i + 1
+END
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;RETURN @output&lt;/p&gt;
+
+&lt;p&gt;END
+{% endhighlight %}&lt;/p&gt;
+
+</description>
+        
         <pubDate>Fri, 29 May 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/2015/05/29/decode-encode-unicode-tsql/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/2015/05/29/decode-encode-unicode-tsql/</guid>
+        <link>http://mauroleonelli.com/blog/jekyll_metas/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/jekyll_metas/</guid>
         
         <category>tech</category>
         
@@ -375,7 +490,9 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
         
         
       </item>
+      
     
+      
       <item>
         <title>Run Jekyll on Windows</title>
         <description>&lt;p&gt;My blog didn’t get updated that often recently, huh?&lt;/p&gt;
@@ -387,62 +504,20 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 &lt;p&gt;I have finally set up Jekyll on Windows and, believe it or not, it works like a charm. A big thank should go to the creator of this nice &lt;a href=&quot;http://jekyll-windows.juthilo.com/&quot;&gt;guide&lt;/a&gt;, which is, btw, a GitHub page!&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 27 May 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/2015/05/27/run-jekyll-on-windows/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/2015/05/27/run-jekyll-on-windows/</guid>
         
-        <category>tech</category>
-        
-        <category>jekyll</category>
-        
-        <category>github</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>A simple way to publish your site to GitHub</title>
-        <description>&lt;p&gt;Jekyll is a wonderful templating engine which works perfectly with GitHub. You can have your wonderful static website up and running in few minutes, hosted and built seamlessly by &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+          <description>&lt;p&gt;My blog didn’t get updated that often recently, huh?&lt;/p&gt;
 
-&lt;p&gt;There is indeed a limitation to this perfect world: GitHub will build Jekyll in –safe mode thus not allowing any Jekyll plugin.&lt;/p&gt;
+&lt;p&gt;Well, in addition to a big project I have been managing recently, I have less and less time to work on my Mac where all the development and publish to GitHub was set up. Thus, never got the chance to upload the couple of pages and changes I had on my Windows machine, ready to be Jekyll-built and pushed to GitHub.&lt;/p&gt;
 
-&lt;p&gt;I have been struggling to find a noob way to publish my GitHub page and version the source control at the same time.&lt;/p&gt;
+&lt;p&gt;That had to come to an end…&lt;/p&gt;
 
-&lt;p&gt;A quick &amp;amp; dirty solution is to create two local repositories pointing to the corresponding GitHub remotes: master (for the site) and source (for the source code). First let’s setup the local folders.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;mkdir master
-mkdir &lt;span class=&quot;nb&quot;&gt;source
-
-cd &lt;/span&gt;master
-git init
-git remote add -t master origin &amp;lt;remote-url&amp;gt;
-
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../source
-git init
-git remote add -t &lt;span class=&quot;nb&quot;&gt;source &lt;/span&gt;origin &amp;lt;remote-url&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;With the folders created as before, you can then install Jekyll in source, make your editing. Then create a small shell script that will:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Build Jekyll&lt;/li&gt;
-  &lt;li&gt;Copy the site to the master folder&lt;/li&gt;
-  &lt;li&gt;Push it to GitHub&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-jekyll build
-&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_site
-cp -r &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; ../../master/
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../../master
-git add --all
-git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;Updating blog&quot;&lt;/span&gt;
-git push -f origin master
-&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ../source&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I have finally set up Jekyll on Windows and, believe it or not, it works like a charm. A big thank should go to the creator of this nice &lt;a href=&quot;http://jekyll-windows.juthilo.com/&quot;&gt;guide&lt;/a&gt;, which is, btw, a GitHub page!&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 22 Nov 2014 17:03:49 +0100</pubDate>
-        <link>http://mauroleonelli.com/2014/11/22/a-simple-way-to-publish-your-site-to-github/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/2014/11/22/a-simple-way-to-publish-your-site-to-github/</guid>
+        
+        <pubDate>Wed, 27 May 2015 18:03:49 +0200</pubDate>
+        <link>http://mauroleonelli.com/blog/jekyll_metas/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/jekyll_metas/</guid>
         
         <category>tech</category>
         
@@ -452,6 +527,208 @@ git push -f origin master
         
         
       </item>
+      
+    
+      
+      <item>
+        <title>Example Post Formatting</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;C&lt;/span&gt;urabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
+
+&lt;h1 id=&quot;heading-1&quot;&gt;Heading 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;heading-2&quot;&gt;Heading 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;heading-3&quot;&gt;Heading 3&lt;/h3&gt;
+
+&lt;h4 id=&quot;heading-4&quot;&gt;Heading 4&lt;/h4&gt;
+
+&lt;h5 id=&quot;heading-5&quot;&gt;Heading 5&lt;/h5&gt;
+
+&lt;h6 id=&quot;heading-6&quot;&gt;Heading 6&lt;/h6&gt;
+
+&lt;blockquote&gt;Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor. Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum.&lt;/blockquote&gt;
+
+&lt;p&gt;Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p&gt;
+
+&lt;h2 id=&quot;unordered-list&quot;&gt;Unordered List&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;List Item&lt;/li&gt;
+  &lt;li&gt;Longer List Item
+    &lt;ul&gt;
+      &lt;li&gt;Nested List Item&lt;/li&gt;
+      &lt;li&gt;Nested Item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;List Item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ordered-list&quot;&gt;Ordered List&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;List Item&lt;/li&gt;
+  &lt;li&gt;Longer List Item
+    &lt;ol&gt;
+      &lt;li&gt;Nested OL Item&lt;/li&gt;
+      &lt;li&gt;Another Nested Item&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;List Item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;definition-list&quot;&gt;Definition List&lt;/h2&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Coffee&lt;/dt&gt;
+  &lt;dd&gt;Black hot drink&lt;/dd&gt;
+  &lt;dt&gt;Milk&lt;/dt&gt;
+  &lt;dd&gt;White cold drink&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.&lt;/p&gt;
+
+&lt;p&gt;Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p&gt;
+
+&lt;p&gt;Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
+
+&lt;p&gt;Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p&gt;
+
+&lt;p&gt;Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+</description>
+        
+          <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;C&lt;/span&gt;urabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 15 Dec 2014 00:00:00 +0100</pubDate>
+        <link>http://mauroleonelli.com/blog/example-post-formatting/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/example-post-formatting/</guid>
+        
+        
+      </item>
+      
+    
+      
+      <item>
+        <title>Featured Image</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;L&lt;/span&gt;orem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.&lt;/p&gt;
+
+&lt;p&gt;Bahamontes lanterne rouge normandie belgium. Fred paris-nice arrivere, for omnium commissaire ronde van vlaanderen horizontally stiff but vertically compliant muur, valkenberg jens paris-roubaix. Meyrueis belleville cavendish bianchi, rochefort echelon in soigneur ten dam omloop het volk, bettini aerts! Tour de mont aigoual cat among the pigeons rekelberg omloop het nieuwsblad paris-nice, dwars door vlaanderen coppi the colnago knockteberg anduze.&lt;/p&gt;
+
+&lt;p&gt;Kaperij lanterne rouge musette rund um koln bruges thor smash, geraardsbergen riis petacchi molteni pedaling squares. Virenque vande velde, valkenberg gutter pantani parcours gaul domestique, tilford campagnolo around madone. Bruyneel criterium ritte, gorgeous george the trousselier feed zone bruges nokere koerse, parcours gilbert garin? Anquetil valkenberg bettini cat among the pigeons.&lt;/p&gt;
+
+&lt;p&gt;Campagnolo the hors delai de wolf as the toto turns venga venga venga, sanchez nys. Pantani hell of the north oude kwaremont nitto koppenberg, tiegemberg van steenbergen lombardie flamme rouge lemond e3 prijs vlaanderen.&lt;/p&gt;
+
+&lt;p&gt;Planckaert berg ter stene freire gorgeous george in rouleur derby, vaughters fabianese omloop het volk rouleur play rouleur derby. Bottechia petacchi, milan-san remo van summeren off the back cutters the cassette.&lt;/p&gt;
+
+&lt;p&gt;Nyvelocity pyrenees vande velde merckx. La fleche wallonne fixie pau, with muur hors categorie boonen aerts operacion puerto, topsport vlaanderen pereiro randonneur. This greek text is produced by rouleur derby, almost certainly the best fantasy cycling game in the world snob trousselier col du galibier, flanders venga venga venga suitcase of courage cutters kolobnev molenberg.&lt;/p&gt;
+</description>
+        
+          <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;L&lt;/span&gt;orem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 14 Dec 2014 00:00:00 +0100</pubDate>
+        <link>http://mauroleonelli.com/blog/featured-image/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/featured-image/</guid>
+        
+        
+      </item>
+      
+    
+      
+      <item>
+        <title>Post With A Code Snippet</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;Y&lt;/span&gt;ou'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+          <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;Y&lt;/span&gt;ou'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes! To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 13 Dec 2014 00:00:00 +0100</pubDate>
+        <link>http://mauroleonelli.com/blog/code-snippet/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/code-snippet/</guid>
+        
+        
+      </item>
+      
+    
+      
+      <item>
+        <title>Figure With A Caption</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;L&lt;/span&gt;orem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.&lt;/p&gt;
+
+&lt;p&gt;Bahamontes lanterne rouge normandie belgium. Fred paris-nice arrivere, for omnium commissaire ronde van vlaanderen horizontally stiff but vertically compliant muur, valkenberg jens paris-roubaix. Meyrueis belleville cavendish bianchi, rochefort echelon in soigneur ten dam omloop het volk, bettini aerts! Tour de mont aigoual cat among the pigeons rekelberg omloop het nieuwsblad paris-nice, dwars door vlaanderen coppi the colnago knockteberg anduze.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/assets/img/touring.jpg&quot; alt=&quot;&quot; /&gt; 
+	&lt;figcaption&gt;Fig1. - This is an example figcaption&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/touring.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Fig1. - This is an example figcaption&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Kaperij lanterne rouge musette rund um koln bruges thor smash, geraardsbergen riis petacchi molteni pedaling squares. Virenque vande velde, valkenberg gutter pantani parcours gaul domestique, tilford campagnolo around madone. Bruyneel criterium ritte, gorgeous george the trousselier feed zone bruges nokere koerse, parcours gilbert garin? Anquetil valkenberg bettini cat among the pigeons.&lt;/p&gt;
+
+&lt;p&gt;Campagnolo the hors delai de wolf as the toto turns venga venga venga, sanchez nys. Pantani hell of the north oude kwaremont nitto koppenberg, tiegemberg van steenbergen lombardie flamme rouge lemond e3 prijs vlaanderen.&lt;/p&gt;
+
+&lt;p&gt;Planckaert berg ter stene freire gorgeous george in rouleur derby, vaughters fabianese omloop het volk rouleur play rouleur derby. Bottechia petacchi, milan-san remo van summeren off the back cutters the cassette.&lt;/p&gt;
+
+&lt;p&gt;Nyvelocity pyrenees vande velde merckx. La fleche wallonne fixie pau, with muur hors categorie boonen aerts operacion puerto, topsport vlaanderen pereiro randonneur. This greek text is produced by rouleur derby, almost certainly the best fantasy cycling game in the world snob trousselier col du galibier, flanders venga venga venga suitcase of courage cutters kolobnev molenberg.&lt;/p&gt;
+</description>
+        
+          <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;L&lt;/span&gt;orem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 12 Dec 2014 00:00:00 +0100</pubDate>
+        <link>http://mauroleonelli.com/blog/figure-with-caption/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/figure-with-caption/</guid>
+        
+        
+      </item>
+      
+    
+      
+      <item>
+        <title>Image in Post</title>
+        <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;L&lt;/span&gt;orem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.&lt;/p&gt;
+
+&lt;p&gt;Bahamontes lanterne rouge normandie belgium. Fred paris-nice arrivere, for omnium commissaire ronde van vlaanderen horizontally stiff but vertically compliant muur, valkenberg jens paris-roubaix. Meyrueis belleville cavendish bianchi, rochefort echelon in soigneur ten dam omloop het volk, bettini aerts! Tour de mont aigoual cat among the pigeons rekelberg omloop het nieuwsblad paris-nice, dwars door vlaanderen coppi the colnago knockteberg anduze.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/touring.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Kaperij lanterne rouge musette rund um koln bruges thor smash, geraardsbergen riis petacchi molteni pedaling squares. Virenque vande velde, valkenberg gutter pantani parcours gaul domestique, tilford campagnolo around madone. Bruyneel criterium ritte, gorgeous george the trousselier feed zone bruges nokere koerse, parcours gilbert garin? Anquetil valkenberg bettini cat among the pigeons.&lt;/p&gt;
+
+&lt;p&gt;Campagnolo the hors delai de wolf as the toto turns venga venga venga, sanchez nys. Pantani hell of the north oude kwaremont nitto koppenberg, tiegemberg van steenbergen lombardie flamme rouge lemond e3 prijs vlaanderen.&lt;/p&gt;
+
+&lt;p&gt;Planckaert berg ter stene freire gorgeous george in rouleur derby, vaughters fabianese omloop het volk rouleur play rouleur derby. Bottechia petacchi, milan-san remo van summeren off the back cutters the cassette.&lt;/p&gt;
+
+&lt;p&gt;Nyvelocity pyrenees vande velde merckx. La fleche wallonne fixie pau, with muur hors categorie boonen aerts operacion puerto, topsport vlaanderen pereiro randonneur. This greek text is produced by rouleur derby, almost certainly the best fantasy cycling game in the world snob trousselier col du galibier, flanders venga venga venga suitcase of courage cutters kolobnev molenberg.&lt;/p&gt;
+</description>
+        
+          <description>&lt;p class=&quot;intro&quot;&gt;&lt;span class=&quot;dropcap&quot;&gt;L&lt;/span&gt;orem ipsum thor smash liege-bastogne-liege landbouwkrediet ombregt krabbe, rouleur derby is for lovers bonk giro gilbert bidon. Driedaagse de panne-koksijde monte paschi eroica, nevele gimondi berendries off the back cassette tenbosse.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 11 Dec 2014 00:00:00 +0100</pubDate>
+        <link>http://mauroleonelli.com/blog/image-in-post/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/image-in-post/</guid>
+        
+        
+      </item>
+      
     
   </channel>
 </rss>

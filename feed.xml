@@ -5,8 +5,8 @@
     <description>Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.</description>
     <link>http://mauroleonelli.com/</link>
     <atom:link href="http://mauroleonelli.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Apr 2018 18:18:50 +0200</pubDate>
-    <lastBuildDate>Wed, 25 Apr 2018 18:18:50 +0200</lastBuildDate>
+    <pubDate>Wed, 25 Apr 2018 18:22:03 +0200</pubDate>
+    <lastBuildDate>Wed, 25 Apr 2018 18:22:03 +0200</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
     
       
@@ -52,7 +52,7 @@
 
 </description>
         
-        <pubDate>Wed, 02 Sep 2015 18:03:49 +0200</pubDate>
+        <pubDate>Wed, 25 Apr 2018 18:03:49 +0200</pubDate>
         <link>http://mauroleonelli.com/blog/Grasshopper-by-google/</link>
         <guid isPermaLink="true">http://mauroleonelli.com/blog/Grasshopper-by-google/</guid>
         
@@ -385,8 +385,9 @@ On many sites they propose different techniques to remove characters from the en
         <title>Decode and Encode Unicode data in SQL Server</title>
         <description>&lt;p&gt;While working on a internet and intranet website with detailed description of cities around the world, I faced difficulties in the encoding and decoding of Unicode data.&lt;/p&gt;
 
-&lt;p&gt;SQL Server can store &lt;a href=&quot;http://en.wikipedia.org/wiki/Unicode&quot;&gt;Unicode&lt;/a&gt; data with the nvarchar data type, but encoding and decoding a string into real Unicode is a bit less straightforward than it may seem.
-&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;SQL Server can store &lt;a href=&quot;http://en.wikipedia.org/wiki/Unicode&quot;&gt;Unicode&lt;/a&gt; data with the nvarchar data type, but encoding and decoding a string into real Unicode is a bit less straightforward than it may seem.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;A &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_Unicode_characters&quot;&gt;Unicode character&lt;/a&gt; like ķ, a.k.a latin small K with cedilla, can be represented as ķ in other words a prefix (&amp;amp;#), a 3 to 5 digit code and a suffix (;).&lt;br /&gt;
 There are 65,535 Unicode character in total.&lt;/p&gt;
@@ -511,8 +512,9 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 
 &lt;p&gt;There is indeed a limitation to this perfect world: GitHub will build Jekyll in –safe mode thus not allowing any Jekyll plugin.&lt;/p&gt;
 
-&lt;p&gt;I have been struggling to find a noob way to publish my GitHub page and version the source control at the same time. 
-&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;I have been struggling to find a noob way to publish my GitHub page and version the source control at the same time.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;A quick &amp;amp; dirty solution is to create two local repositories pointing to the corresponding GitHub remotes: master (for the site) and source (for the source code). First let’s setup the local folders.&lt;/p&gt;
 

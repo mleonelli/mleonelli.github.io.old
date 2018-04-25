@@ -5,9 +5,66 @@
     <description>Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.</description>
     <link>http://mauroleonelli.com/</link>
     <atom:link href="http://mauroleonelli.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Apr 2018 14:16:20 +0200</pubDate>
-    <lastBuildDate>Tue, 24 Apr 2018 14:16:20 +0200</lastBuildDate>
+    <pubDate>Wed, 25 Apr 2018 18:09:19 +0200</pubDate>
+    <lastBuildDate>Wed, 25 Apr 2018 18:09:19 +0200</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
+    
+      
+      <item>
+        <title>Grasshopper - a coding app by Google</title>
+        <description>&lt;p&gt;In the vast offering for online training and education it appeared a couple of days ago an app by Google called Grasshopper that is worth knowing for its mobile-first approach and its good usability.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The application itself guides the beginner to the basis of Javascript in order to introduce fun challenges with the D3 library and SVG manipulation. The interesting thing about this app is that, contrary to many learning sites, it’s meant to be consumed on mobile only.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/assets/img/Grs/1.jpg&quot; alt=&quot;Screen of the advancement in Grasshopper&quot; style=&quot;height:600px&quot; /&gt; 
+	&lt;figcaption&gt;Fig1. - The advancement in Grasshopper&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The advancement goes bottom up as you figurately “climb” your way with challenges (and the last challenges of the first course are about a mountain climb…).&lt;/p&gt;
+
+&lt;p&gt;The activities are basically divided in quizzes, very concise refreshers of the concepts introduced and challenges, where the learner has to play with code in order to meet the instructions’ goals.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/assets/img/Grs/2.jpg&quot; alt=&quot;Screen of a quiz in Grasshopper&quot; style=&quot;height:600px&quot; /&gt; 
+	&lt;figcaption&gt;Fig2. - A quiz in Grasshopper&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Challenges are generally easy in order to be accessible to beginners but tend to be more challenging as you move up the ladder. Commands are selected by clicking on a list of available ones, making the coding easy on mobile.&lt;/p&gt;
+
+&lt;p&gt;From time to time as more commands need to be chained (especially on animations course), the UI become a little rusty on smaller screens as it’s not simple to click on the correct element you want to work on.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/assets/img/Grs/3.jpg&quot; alt=&quot;Screen of a challenge in Grasshopper&quot; style=&quot;height:600px&quot; /&gt; 
+	&lt;figcaption&gt;Fig3. - A challenge in Grasshopper&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Overall, Grasshopper is a fun app for an introduction to coding and a nice example of how mobile apps can be simple yet with a rich user interaction.&lt;/p&gt;
+
+&lt;p&gt;Grasshopper is available on &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.area120.grasshopper&quot;&gt;Google Play &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.area120.grasshopper&amp;amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1&quot;&gt;&lt;img alt=&quot;Get it on Google Play&quot; src=&quot;https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        
+          <description>&lt;p&gt;In the vast offering for online training and education it appeared a couple of days ago an app by Google called Grasshopper that is worth knowing for its mobile-first approach and its good usability.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 02 Sep 2015 18:03:49 +0200</pubDate>
+        <link>http://mauroleonelli.com/blog/Grasshopper-by-google/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/Grasshopper-by-google/</guid>
+        
+        <category>Google</category>
+        
+        <category>coding</category>
+        
+        <category>learning</category>
+        
+        
+      </item>
+      
     
       
       <item>
@@ -284,9 +341,9 @@ $/xm&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
       
       <item>
         <title>Remove the last character in a SQL string</title>
-        <description>&lt;p&gt;Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…).&lt;/p&gt;
-
-&lt;p&gt;On many sites they propose different techniques to remove characters from the end of a string by mean of SUBSTRINGs, LEFTs AND DATALENGTHs&lt;/p&gt;
+        <description>&lt;p&gt;Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…). 
+&lt;!--more--&gt;
+On many sites they propose different techniques to remove characters from the end of a string by mean of SUBSTRINGs, LEFTs AND DATALENGTHs&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;k&quot;&gt;DECLARE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;VARCHAR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;SET&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'1,2,3,4,5,'&lt;/span&gt;
@@ -308,28 +365,6 @@ $/xm&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 </description>
         
           <description>&lt;p&gt;Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…).&lt;/p&gt;
-
-&lt;p&gt;On many sites they propose different techniques to remove characters from the end of a string by mean of SUBSTRINGs, LEFTs AND DATALENGTHs
-{% highlight sql%}
-DECLARE @String as VARCHAR(50)
-SET @String=’1,2,3,4,5,’&lt;/p&gt;
-
-&lt;p&gt;SELECT LEFT(@String,DATALENGTH(@String)-1)&lt;/p&gt;
-
-&lt;p&gt;SELECT STUFF(@String,DATALENGTH(@String), 1, ‘’)&lt;/p&gt;
-
-&lt;p&gt;SELECT STUFF(@String,DATALENGTH(@String), 1, ‘’)
-{% endhighlight %}&lt;/p&gt;
-
-&lt;p&gt;As you can clearly see, all of them require the string to be used twice, whici is totally legit but pretty annoying if you want to do it in your select command.&lt;/p&gt;
-
-&lt;p&gt;Another approach that can be used “inline” makes use of the REVERSE and STUFF commands. Easy!&lt;/p&gt;
-
-&lt;p&gt;{% highlight sql%}
-DECLARE @String as VARCHAR(50)
-SET @String=’1,2,3,4,5,’
-select reverse(stuff(reverse(@String), 1, 1, ‘’))
-{% endhighlight %}&lt;/p&gt;
 
 </description>
         
@@ -536,7 +571,8 @@ END
 
 &lt;p&gt;There is indeed a limitation to this perfect world: GitHub will build Jekyll in –safe mode thus not allowing any Jekyll plugin.&lt;/p&gt;
 
-&lt;p&gt;I have been struggling to find a noob way to publish my GitHub page and version the source control at the same time.&lt;/p&gt;
+&lt;p&gt;I have been struggling to find a noob way to publish my GitHub page and version the source control at the same time. 
+&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;p&gt;A quick &amp;amp; dirty solution is to create two local repositories pointing to the corresponding GitHub remotes: master (for the site) and source (for the source code). First let’s setup the local folders.&lt;/p&gt;
 
@@ -577,41 +613,6 @@ git push &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; origin master
 &lt;p&gt;There is indeed a limitation to this perfect world: GitHub will build Jekyll in –safe mode thus not allowing any Jekyll plugin.&lt;/p&gt;
 
 &lt;p&gt;I have been struggling to find a noob way to publish my GitHub page and version the source control at the same time.&lt;/p&gt;
-
-&lt;p&gt;A quick &amp;amp; dirty solution is to create two local repositories pointing to the corresponding GitHub remotes: master (for the site) and source (for the source code). First let’s setup the local folders.&lt;/p&gt;
-
-&lt;p&gt;{% highlight sh%}
-mkdir master
-mkdir source&lt;/p&gt;
-
-&lt;p&gt;cd master
-git init
-git remote add -t master origin &lt;remote-url&gt;&lt;/remote-url&gt;&lt;/p&gt;
-
-&lt;p&gt;cd ../source
-git init
-git remote add -t source origin &lt;remote-url&gt;
-{% endhighlight %}&lt;/remote-url&gt;&lt;/p&gt;
-
-&lt;p&gt;With the folders created as before, you can then install Jekyll in source, make your editing. Then create a small shell script that will:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Build Jekyll&lt;/li&gt;
-  &lt;li&gt;Copy the site to the master folder&lt;/li&gt;
-  &lt;li&gt;Push it to GitHub&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;{% highlight sh %}
-#!/bin/sh
-jekyll build
-cd _site
-cp -r * ../../master/
-cd ../../master
-git add –all
-git commit -m “Updating blog”
-git push -f origin master
-cd ../source
-{% endhighlight %}&lt;/p&gt;
 
 </description>
         

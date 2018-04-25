@@ -100,6 +100,14 @@
     
       <li>
         <span class="date">September 02, 2015</span>
+        <h3><a class="post-link" href="/blog/Grasshopper-by-google/">Grasshopper - a coding app by Google</a></h3>
+        <p>In the vast offering for online training and education it appeared a couple of days ago an app by Google called Grasshopper that is worth knowing for its mobile-first approach and its good usability.
+
+</p>
+      </li>
+    
+      <li>
+        <span class="date">September 02, 2015</span>
         <h3><a class="post-link" href="/blog/Duolingo-russian-soon-available/">Duolingo Russian available on 10th September</a></h3>
         <p>I was monitoring this course since a long time and finally it seems it’s gonna happen: Duolingo Russian is finally coming!
 
@@ -122,28 +130,6 @@ While Duolingo it may be a “simple” language course, compared to other solut
         <span class="date">June 15, 2015</span>
         <h3><a class="post-link" href="/blog/jekyll_metas/">Remove the last character in a SQL string</a></h3>
         <p>Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…).
-
-On many sites they propose different techniques to remove characters from the end of a string by mean of SUBSTRINGs, LEFTs AND DATALENGTHs
-{% highlight sql%}
-DECLARE @String as VARCHAR(50)
-SET @String=’1,2,3,4,5,’
-
-SELECT LEFT(@String,DATALENGTH(@String)-1)
-
-SELECT STUFF(@String,DATALENGTH(@String), 1, ‘’)
-
-SELECT STUFF(@String,DATALENGTH(@String), 1, ‘’)
-{% endhighlight %}
-
-As you can clearly see, all of them require the string to be used twice, whici is totally legit but pretty annoying if you want to do it in your select command.
-
-Another approach that can be used “inline” makes use of the REVERSE and STUFF commands. Easy!
-
-{% highlight sql%}
-DECLARE @String as VARCHAR(50)
-SET @String=’1,2,3,4,5,’
-select reverse(stuff(reverse(@String), 1, 1, ‘’))
-{% endhighlight %}
 
 </p>
       </li>
@@ -215,20 +201,6 @@ RETURN @output
 
 END
 {% endhighlight %}
-
-</p>
-      </li>
-    
-      <li>
-        <span class="date">May 27, 2015</span>
-        <h3><a class="post-link" href="/blog/jekyll_metas/">Run Jekyll on Windows</a></h3>
-        <p>My blog didn’t get updated that often recently, huh?
-
-Well, in addition to a big project I have been managing recently, I have less and less time to work on my Mac where all the development and publish to GitHub was set up. Thus, never got the chance to upload the couple of pages and changes I had on my Windows machine, ready to be Jekyll-built and pushed to GitHub.
-
-That had to come to an end…
-
-I have finally set up Jekyll on Windows and, believe it or not, it works like a charm. A big thank should go to the creator of this nice guide, which is, btw, a GitHub page!
 
 </p>
       </li>

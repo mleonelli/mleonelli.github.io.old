@@ -5,8 +5,8 @@
     <description>Mauro Leonelli - my personal webspace about natural and coding languages, translation, localization and online courses.</description>
     <link>http://mauroleonelli.com/</link>
     <atom:link href="http://mauroleonelli.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 25 Apr 2018 18:09:19 +0200</pubDate>
-    <lastBuildDate>Wed, 25 Apr 2018 18:09:19 +0200</lastBuildDate>
+    <pubDate>Wed, 25 Apr 2018 18:18:50 +0200</pubDate>
+    <lastBuildDate>Wed, 25 Apr 2018 18:18:50 +0200</lastBuildDate>
     <generator>Jekyll v3.8.0</generator>
     
       
@@ -369,8 +369,8 @@ On many sites they propose different techniques to remove characters from the en
 </description>
         
         <pubDate>Mon, 15 Jun 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/blog/jekyll_metas/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/blog/jekyll_metas/</guid>
+        <link>http://mauroleonelli.com/blog/remove-last-character-in-a-string/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/remove-last-character-in-a-string/</guid>
         
         <category>tech</category>
         
@@ -385,7 +385,8 @@ On many sites they propose different techniques to remove characters from the en
         <title>Decode and Encode Unicode data in SQL Server</title>
         <description>&lt;p&gt;While working on a internet and intranet website with detailed description of cities around the world, I faced difficulties in the encoding and decoding of Unicode data.&lt;/p&gt;
 
-&lt;p&gt;SQL Server can store &lt;a href=&quot;http://en.wikipedia.org/wiki/Unicode&quot;&gt;Unicode&lt;/a&gt; data with the nvarchar data type, but encoding and decoding a string into real Unicode is a bit less straightforward than it may seem.&lt;/p&gt;
+&lt;p&gt;SQL Server can store &lt;a href=&quot;http://en.wikipedia.org/wiki/Unicode&quot;&gt;Unicode&lt;/a&gt; data with the nvarchar data type, but encoding and decoding a string into real Unicode is a bit less straightforward than it may seem.
+&lt;!--more--&gt;&lt;/p&gt;
 
 &lt;p&gt;A &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_Unicode_characters&quot;&gt;Unicode character&lt;/a&gt; like ķ, a.k.a latin small K with cedilla, can be represented as ķ in other words a prefix (&amp;amp;#), a 3 to 5 digit code and a suffix (;).&lt;br /&gt;
 There are 65,535 Unicode character in total.&lt;/p&gt;
@@ -452,72 +453,11 @@ There are 65,535 Unicode character in total.&lt;/p&gt;
 
 &lt;p&gt;SQL Server can store &lt;a href=&quot;http://en.wikipedia.org/wiki/Unicode&quot;&gt;Unicode&lt;/a&gt; data with the nvarchar data type, but encoding and decoding a string into real Unicode is a bit less straightforward than it may seem.&lt;/p&gt;
 
-&lt;p&gt;A &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_Unicode_characters&quot;&gt;Unicode character&lt;/a&gt; like ķ, a.k.a latin small K with cedilla, can be represented as ķ in other words a prefix (&amp;amp;#), a 3 to 5 digit code and a suffix (;).&lt;br /&gt;
-There are 65,535 Unicode character in total.&lt;/p&gt;
-
-&lt;p&gt;Below two utility queries to encode and decode Unicode in SQL Server.&lt;/p&gt;
-
-&lt;p&gt;{% highlight sql%}&lt;/p&gt;
-
-&lt;p&gt;CREATE FUNCTION DecodeUnicode(
-    @data nvarchar(MAX), 
-    @prefix varchar(100)  = ‘&amp;amp;#’,
-    @suffix varchar(100) = ‘;’
-)
-RETURNS nvarchar(MAX)
-AS
-BEGIN
-  DECLARE @start int
-  DECLARE @end int&lt;/p&gt;
-
-&lt;p&gt;WHILE CHARINDEX(@prefix, @data) &amp;gt; 0
-  BEGIN
-      SET @start = CHARINDEX(@prefix, @data)
-      SET @end = CHARINDEX(@suffix, @data, @start)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  SET @data = REPLACE(
-       @data, 
-       SUBSTRING(@data, @start, @end -@start + LEN(@suffix)),
-       NCHAR(SUBSTRING(@data, @start+ LEN(@prefix),@end -@start - LEN(@prefix)))
-  )   END   RETURN @data END
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;CREATE FUNCTION EncodeUnicode(
-    @data nvarchar(max), 
-    @prefix varchar(10) = ‘&amp;amp;#’, 
-    @suffix varchar(10) = ‘;’
-)
-RETURNS nvarchar(max)
-AS
-BEGIN&lt;/p&gt;
-
-&lt;p&gt;DECLARE @i Int
-  DECLARE @output nvarchar(max)&lt;/p&gt;
-
-&lt;p&gt;SET @i = 1
-  SET @output = ‘’&lt;/p&gt;
-
-&lt;p&gt;WHILE @i &amp;lt;= LEN(@data)	
-    BEGIN
-      If Unicode(SUBSTRING(@data, @i, 1)) &amp;gt; 255
-        SET @output = @output + @prefix + CONVERT(varchar(5),Unicode(SUBSTRING(@data, @i, 1))) + @suffix
-      Else
-        SET @output = @output + SUBSTRING(@data, @i, 1)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  SET @i = @i + 1
-END
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;RETURN @output&lt;/p&gt;
-
-&lt;p&gt;END
-{% endhighlight %}&lt;/p&gt;
-
 </description>
         
         <pubDate>Fri, 29 May 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/blog/jekyll_metas/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/blog/jekyll_metas/</guid>
+        <link>http://mauroleonelli.com/blog/decode-encode-unicode-tsql/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/decode-encode-unicode-tsql/</guid>
         
         <category>tech</category>
         
@@ -551,8 +491,8 @@ END
 </description>
         
         <pubDate>Wed, 27 May 2015 18:03:49 +0200</pubDate>
-        <link>http://mauroleonelli.com/blog/jekyll_metas/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/blog/jekyll_metas/</guid>
+        <link>http://mauroleonelli.com/blog/run-jekyll-on-windows/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/run-jekyll-on-windows/</guid>
         
         <category>tech</category>
         
@@ -595,8 +535,7 @@ git remote add &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &lt;span class=&
   &lt;li&gt;Push it to GitHub&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh
-&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
 jekyll build
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_site
 &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; ../../master/
@@ -617,8 +556,8 @@ git push &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; origin master
 </description>
         
         <pubDate>Sat, 22 Nov 2014 17:03:49 +0100</pubDate>
-        <link>http://mauroleonelli.com/blog/jekyll_metas/</link>
-        <guid isPermaLink="true">http://mauroleonelli.com/blog/jekyll_metas/</guid>
+        <link>http://mauroleonelli.com/blog/a-simple-way-to-publish-your-site-to-github/</link>
+        <guid isPermaLink="true">http://mauroleonelli.com/blog/a-simple-way-to-publish-your-site-to-github/</guid>
         
         <category>tech</category>
         

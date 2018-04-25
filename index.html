@@ -128,7 +128,7 @@ While Duolingo it may be a “simple” language course, compared to other solut
     
       <li>
         <span class="date">June 15, 2015</span>
-        <h3><a class="post-link" href="/blog/jekyll_metas/">Remove the last character in a SQL string</a></h3>
+        <h3><a class="post-link" href="/blog/remove-last-character-in-a-string/">Remove the last character in a SQL string</a></h3>
         <p>Google is your friend and Internet the place where you can find pretty much an answer for every question you ever had. Too bad it’s not always the good one (or not the one you were looking for…).
 
 </p>
@@ -136,71 +136,10 @@ While Duolingo it may be a “simple” language course, compared to other solut
     
       <li>
         <span class="date">May 29, 2015</span>
-        <h3><a class="post-link" href="/blog/jekyll_metas/">Decode and Encode Unicode data in SQL Server</a></h3>
+        <h3><a class="post-link" href="/blog/decode-encode-unicode-tsql/">Decode and Encode Unicode data in SQL Server</a></h3>
         <p>While working on a internet and intranet website with detailed description of cities around the world, I faced difficulties in the encoding and decoding of Unicode data.
 
 SQL Server can store Unicode data with the nvarchar data type, but encoding and decoding a string into real Unicode is a bit less straightforward than it may seem.
-
-A Unicode character like ķ, a.k.a latin small K with cedilla, can be represented as ķ in other words a prefix (&amp;#), a 3 to 5 digit code and a suffix (;).
-There are 65,535 Unicode character in total.
-
-Below two utility queries to encode and decode Unicode in SQL Server.
-
-{% highlight sql%}
-
-CREATE FUNCTION DecodeUnicode(
-    @data nvarchar(MAX), 
-    @prefix varchar(100)  = ‘&amp;#’,
-    @suffix varchar(100) = ‘;’
-)
-RETURNS nvarchar(MAX)
-AS
-BEGIN
-  DECLARE @start int
-  DECLARE @end int
-
-WHILE CHARINDEX(@prefix, @data) &gt; 0
-  BEGIN
-      SET @start = CHARINDEX(@prefix, @data)
-      SET @end = CHARINDEX(@suffix, @data, @start)
-
-  SET @data = REPLACE(
-       @data, 
-       SUBSTRING(@data, @start, @end -@start + LEN(@suffix)),
-       NCHAR(SUBSTRING(@data, @start+ LEN(@prefix),@end -@start - LEN(@prefix)))
-  )   END   RETURN @data END
-
-
-CREATE FUNCTION EncodeUnicode(
-    @data nvarchar(max), 
-    @prefix varchar(10) = ‘&amp;#’, 
-    @suffix varchar(10) = ‘;’
-)
-RETURNS nvarchar(max)
-AS
-BEGIN
-
-DECLARE @i Int
-  DECLARE @output nvarchar(max)
-
-SET @i = 1
-  SET @output = ‘’
-
-WHILE @i &lt;= LEN(@data)	
-    BEGIN
-      If Unicode(SUBSTRING(@data, @i, 1)) &gt; 255
-        SET @output = @output + @prefix + CONVERT(varchar(5),Unicode(SUBSTRING(@data, @i, 1))) + @suffix
-      Else
-        SET @output = @output + SUBSTRING(@data, @i, 1)
-
-  SET @i = @i + 1
-END
-
-
-RETURN @output
-
-END
-{% endhighlight %}
 
 </p>
       </li>
